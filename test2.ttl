@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+
+nidm:entity_4dd12419-1bb0-4c3d-8a1e-34c306083613 rdf:type nidm:DemographicsAcquisitionObject ;
+  nidm:objID "1f9f3a10-8265-46ab-a632-3136545d0214" ;
+  nidm:gender "M" ;
+  nidm:race "White" .
