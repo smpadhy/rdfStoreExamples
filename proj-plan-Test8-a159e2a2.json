@@ -1,0 +1,43 @@
+{
+	"Project Name": "Test8",
+	"Number of Sessions": 2,
+	"Personnel": [
+		"Dorota",
+		"Smruti"
+	],
+	"Sessions": [
+		{
+			"Session Number": 1,
+			"Label": "V1",
+			"Description": "Demo",
+			"Instruments": [
+				{
+					"Instrument Type": "Assessments",
+					"Form Name": "terms-bdi01-beck.json",
+					"Estimated Time": "30min",
+					"Assignee": "Smruti"
+				},
+				{
+					"Instrument Type": "Questionnaire",
+					"Form Name": "",
+					"Estimated Time": "1h",
+					"Assignee": "Dorota"
+				}
+			]
+		},
+		{
+			"Session Number": 2,
+			"Label": "V2",
+			"Description": "D2",
+			"Instruments": [
+				{
+					"Instrument Type": "Imaging/Scanning",
+					"Form Name": "",
+					"Estimated Time": "3h",
+					"Assignee": "Smruti"
+				}
+			]
+		}
+	],
+	"ProjectPlanID": "a159e2a2-971c-42b2-b22f-798ef9dbc2b7"
+}

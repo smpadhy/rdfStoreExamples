@@ -9,7 +9,7 @@ let namespaces = {}
 /**
   * RDF store creation and setup
   */
-function rdfStoreSetup (){
+var _rdfStoreSetup = function(){
     let rstore = rdfstore.create(function(err, store) {
       if(err){
         console.log("not able to create store")
@@ -22,34 +22,38 @@ function rdfStoreSetup (){
     rstore.rdf.setPrefix("nda","https://ndar.nih.gov/api/datadictionary/v2/dataelement/")
     rstore.rdf.setPrefix("prov","http://www.w3.org/ns/prov#")
 
-    addToStoreNamespace("nidm", "http://purl.org/nidash/nidm#")
-    addToStoreNamespace("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
-    addToStoreNamespace("nda","https://ndar.nih.gov/api/datadictionary/v2/dataelement/")
-    addToStoreNamespace("prov","http://www.w3.org/ns/prov#")
+    _addToStoreNamespace("nidm", "http://purl.org/nidash/nidm#")
+    _addToStoreNamespace("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+    _addToStoreNamespace("nda","https://ndar.nih.gov/api/datadictionary/v2/dataelement/")
+    _addToStoreNamespace("prov","http://www.w3.org/ns/prov#")
     console.log("Namespaces:---->", namespaces)
     return {store:rstore, graph:graph}
   }
-setup = rdfStoreSetup()
+/*setup = rdfStoreSetup()
 store = setup.store
-rgraph = setup.graph
+rgraph = setup.graph*/
 let pnodes = {}
 
-function addToStoreNamespace(prefix, uri){
+/*function addToStoreNamespace(prefix, uri){
+  namespaces[uri] = prefix
+}*/
+var _addToStoreNamespace = function(prefix, uri){
   namespaces[uri] = prefix
 }
+
 function getPrefix(uri){
   return namespaces[uri]
 }
 
 
-loadJsonFile('proj-plan-Test8-a159e2a2.json').then(ob => {
+/*loadJsonFile('proj-plan-Test8-a159e2a2.json').then(ob => {
       console.log("ob:==>", ob)
       saveToRDFstore(ob)
-    })
+    })*/
 /*
 Save to RDF store
 */
-function saveToRDFstore(jsonObj){
+var _saveToRDFstore = function(jsonObj){
 
   let tstring = "@prefix nidm: <"+ store.rdf.prefixes.get("nidm")+"> .\n"
   tstring = tstring + "@prefix rdf: <"+ store.rdf.prefixes.get("rdf")+"> .\n"
@@ -144,13 +148,6 @@ function saveToRDFstore(jsonObj){
         store.rdf.createNamedNode(store.rdf.resolve("prov:hadMember")),
         snodes[j]))
     }
-
-    /*rgraph.add(store.rdf.createTriple(ag,
-    store.rdf.createNamedNode(store.rdf.resolve("rdf:a")),
-    store.rdf.createNamedNode(store.rdf.resolve("prov:Agent"))))*/
-    //rgraph.add(store.rdf.createTriple(ag,
-    //store.rdf.createNamedNode(store.rdf.resolve("rdf:a")),
-    //store.rdf.createNamedNode(store.rdf.resolve("prov:Person"))))
 
     store.insert(rgraph, "nidm:tgraph", function(err) {
       if(err){
@@ -283,4 +280,9 @@ function getPrefixKeyForm(sobj){
     node_name = node_name + value
   }
   return node_name
+}
+module.exports = {
+  addToStoreNamespace : _addToStoreNamespace,
+  rdfStoreSetup : _rdfStoreSetup,
+  saveToRDFstore : _saveToRDFstore
 }
