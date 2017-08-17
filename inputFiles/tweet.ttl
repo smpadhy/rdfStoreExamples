@@ -1,0 +1,12 @@
+@prefix smo: <http://example.org/> .
+@prefix : <http://example.org/> .
+
+:tweet1 smo:tweeted_at "1" ;
+        smo:has_hashtag "tag1", "tag2", "tag3" ;
+        smo:tweeted_by "user1" ;
+        smo:english_tweet true .
+
+:tweet2 smo:tweeted_at "2" ;
+        smo:has_hashtag "tag2", "tag3", "tag4" ;
+        smo:tweeted_by "user2" ;
+        smo:english_tweet true .

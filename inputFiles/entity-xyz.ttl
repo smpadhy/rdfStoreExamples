@@ -1,0 +1,6 @@
+@prefix <http://purl.org/nidash/nidm#> .
+@prefix <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+nidm:entity_4dd12419-1bb0-4c3d-8a1e-34c306083613 rdf:type nidm:DemographicsAcquisitionObject ;
+ nidm:objID 7154a448-c0fd-4ddb-8871-1210f1a83c14 ; 
+   nidm:gender M ; 
+   nidm:race  Asian .

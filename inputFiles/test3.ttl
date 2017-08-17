@@ -1,0 +1,4 @@
+http://purl.org/nidash/nidm#entity_4dd12419-1bb0-4c3d-8a1e-34c306083613 http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://purl.org/nidash/nidm#DemographicsAcquisitionObject ;
+  http://purl.org/nidash/nidm#objID "1f9f3a10-8265-46ab-a632-3136545d0214" ;
+  http://purl.org/nidash/nidm#gender "M" ;
+  http://purl.org/nidash/nidm#race "White" .
