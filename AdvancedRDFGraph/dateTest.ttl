@@ -1,0 +1,5 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+
+ex:subject ex:date "2014-05-23T10:20:13+05:30"^^xsd:dateTime .
+ex:sub1 ex:date "2014-05-23T11:20:13+05:30"^^xsd:dateTime .
