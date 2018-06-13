@@ -1,0 +1,216 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_11c8f76b-a66d-4d09-9f93-3a44d81cbae6 rdf:type prov:Activity  ;
+  nidm:SessionNumber "2" ;
+  nidm:SessionName "Session 2" ;
+  provone:isPartOf nidm:activity_41cc813a-30bc-4a10-9952-ddee8f5cc27b  ;
+  nidm:SessionID "11c8f76b-a66d-4d09-9f93-3a44d81cbae6" .
+nidm:activity_48fc6e73-1bf4-4acf-b599-401645115cae nidm:SessionName "Session 1" ;
+  rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  provone:isPartOf nidm:activity_41cc813a-30bc-4a10-9952-ddee8f5cc27b  ;
+  nidm:SessionID "48fc6e73-1bf4-4acf-b599-401645115cae" .
+nidm:entity_a0c86942-4e74-494d-b75e-686828ee01d8 nidm:grit_amb3 " Mostly like me" ;
+  nidm:interview_date "05/22/2018"^^xsd:dateTime ;
+  nidm:grit12 " Not like me at all" ;
+  rdf:type prov:Entity  ;
+  nidm:grit4 " Not like me at all" ;
+  nidm:grit5 " Not like me at all" ;
+  nidm:subjectkey "G19" ;
+  nidm:src_subject_id "S19" ;
+  nidm:interview_age "467" ;
+  nidm:grit1 " Not like me at all" ;
+  nidm:grit2 " Not like me at all" ;
+  nidm:grit3 " Not like me at all" ;
+  nidm:grit6 " Not like me at all" ;
+  nidm:grit7 " Not like me at all" ;
+  nidm:grit8 " Not like me at all" ;
+  nidm:grit9 " Not like me at all" ;
+  nidm:grit10 " Not like me at all" ;
+  nidm:grit11 " Not like me at all" ;
+  nidm:grit_total "not at all gritty" ;
+  nidm:grit_ci "erty" ;
+  nidm:grit_pe "trye" ;
+  nidm:grit_bgss "20" ;
+  nidm:grit_amb "16" ;
+  nidm:grit_amb1 " Mostly like me" ;
+  nidm:grit_amb2 " Somewhat like me" ;
+  nidm:grit_amb4 " Somewhat like me" ;
+  nidm:grit_amb5 " Very much like me" ;
+  nidm:version_form "23" ;
+  prov:wasGeneratedBy nidm:activity_09940565-df12-452e-ac4a-4a30f06de0b5  ;
+  prov:wasAttributedTo nidm:agent_S19  ;
+  nidm:gender " Male" .
+nidm:entity_fcfb0da7-07ea-4ed6-ad49-c616d7caa96c nidm:grit3 " Very much like me" ;
+  nidm:grit_amb4 " Not like me at all" ;
+  rdf:type prov:Entity  ;
+  nidm:grit4 " Very much like me" ;
+  nidm:grit_amb3 " Not like me at all" ;
+  nidm:grit5 " Very much like me" ;
+  nidm:subjectkey "G17" ;
+  nidm:src_subject_id "S19" ;
+  nidm:interview_date "05/22/2018"^^xsd:dateTime ;
+  nidm:interview_age "467" ;
+  nidm:grit1 " Very much like me" ;
+  nidm:grit2 " Very much like me" ;
+  nidm:grit6 " Very much like me" ;
+  nidm:grit7 " Very much like me" ;
+  nidm:grit8 " Very much like me" ;
+  nidm:grit9 " Very much like me" ;
+  nidm:grit10 " Very much like me" ;
+  nidm:grit11 " Very much like me" ;
+  nidm:grit12 " Very much like me" ;
+  nidm:grit_total "not at all gritty" ;
+  nidm:grit_ci "true" ;
+  nidm:grit_pe "true" ;
+  nidm:grit_bgss "16" ;
+  nidm:grit_amb "19" ;
+  nidm:grit_amb1 " Not like me at all" ;
+  nidm:grit_amb2 " Not like me at all" ;
+  nidm:grit_amb5 " Not like me at all" ;
+  nidm:version_form "tyx" ;
+  prov:wasGeneratedBy nidm:activity_f7b53f67-0cb3-4bf9-a04d-ad2738e9ab70  ;
+  prov:wasAttributedTo nidm:agent_S19  ;
+  nidm:gender " Male" .
+nidm:entity_e738d883-bef6-4038-92da-8cbf24bf2c24 prov:wasAttributedTo nidm:agent_S19  ;
+  rdf:type prov:Entity  ;
+  prov:wasGeneratedBy nidm:activity_988443c9-0a25-4079-a219-e339055f2c8d  ;
+  nidm:new123 "test1" ;
+  nidm:field1 "test2" ;
+  nidm:field2 "test3" .
+nidm:activity_f7b53f67-0cb3-4bf9-a04d-ad2738e9ab70 nidm:AcquisitionName "Task 1" ;
+  rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_48fc6e73-1bf4-4acf-b599-401645115cae  ;
+  nidm:AcquisitionActivityID "f7b53f67-0cb3-4bf9-a04d-ad2738e9ab70" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m83-12-Item  .
+nidm:activity_b93f468f-474a-47e5-9d93-8fe295a49098 nidm:Status "completed" ;
+  rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_0251fb9b-7c60-4c5c-b4d4-c86334875c9a  ;
+  nidm:AcquisitionName "Task 2" ;
+  nidm:AcquisitionActivityID "b93f468f-474a-47e5-9d93-8fe295a49098" ;
+  prov:used nidm:terms-Adult253-Adult  .
+nidm:activity_41cc813a-30bc-4a10-9952-ddee8f5cc27b nidm:Description "testing" ;
+  rdf:type prov:Activity  ;
+  dc:created "2018-05-22T10:42:07-04:00"^^xsd:dateTime ;
+  nidm:version "0" ;
+  nidm:ID "41cc813a-30bc-4a10-9952-ddee8f5cc27b" ;
+  nidm:Name "C8" ;
+  prov:hadPlan nidm:entity_09cb3d80-913d-40cf-ac25-04a756b08d10  .
+nidm:activity_988443c9-0a25-4079-a219-e339055f2c8d rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_48fc6e73-1bf4-4acf-b599-401645115cae  ;
+  nidm:AcquisitionName "Task 2" ;
+  nidm:AcquisitionActivityID "988443c9-0a25-4079-a219-e339055f2c8d" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-Adult253-Adult  .
+nidm:activity_09940565-df12-452e-ac4a-4a30f06de0b5 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_11c8f76b-a66d-4d09-9f93-3a44d81cbae6  ;
+  nidm:AcquisitionName "T4" ;
+  nidm:AcquisitionActivityID "09940565-df12-452e-ac4a-4a30f06de0b5" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m83-12-Item  .
+nidm:activity_0251fb9b-7c60-4c5c-b4d4-c86334875c9a rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  nidm:SessionName "Session 1" ;
+  provone:isPartOf nidm:activity_41cc813a-30bc-4a10-9952-ddee8f5cc27b  ;
+  nidm:SessionID "0251fb9b-7c60-4c5c-b4d4-c86334875c9a" .
+nidm:activity_1dcdfc1a-9909-4372-acc8-9140f71fa557 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_0251fb9b-7c60-4c5c-b4d4-c86334875c9a  ;
+  nidm:AcquisitionName "Task 1" ;
+  nidm:AcquisitionActivityID "1dcdfc1a-9909-4372-acc8-9140f71fa557" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m83-12-Item  .
+nidm:entity_4cdf5bbb-f37a-4b54-9963-2bd1f02a11e1 rdf:type prov:Entity  ;
+  nidm:grit4 " Very much like me" ;
+  nidm:grit_amb3 " Very much like me" ;
+  nidm:grit5 " Very much like me" ;
+  nidm:subjectkey "G20" ;
+  nidm:src_subject_id "S20" ;
+  nidm:interview_date "05/22/2018"^^xsd:dateTime ;
+  nidm:interview_age "600" ;
+  nidm:grit1 " Very much like me" ;
+  nidm:grit2 " Very much like me" ;
+  nidm:grit3 " Very much like me" ;
+  nidm:grit6 " Very much like me" ;
+  nidm:grit7 " Very much like me" ;
+  nidm:grit8 " Very much like me" ;
+  nidm:grit9 " Very much like me" ;
+  nidm:grit10 " Very much like me" ;
+  nidm:grit11 " Very much like me" ;
+  nidm:grit12 " Very much like me" ;
+  nidm:grit_total "not at all gritty" ;
+  nidm:grit_ci "true" ;
+  nidm:grit_pe "true" ;
+  nidm:grit_bgss "3" ;
+  nidm:grit_amb "1" ;
+  nidm:grit_amb1 " Very much like me" ;
+  nidm:grit_amb2 " Very much like me" ;
+  nidm:grit_amb4 " Very much like me" ;
+  nidm:grit_amb5 " Very much like me" ;
+  nidm:version_form "tyu" ;
+  prov:wasGeneratedBy nidm:activity_1dcdfc1a-9909-4372-acc8-9140f71fa557  ;
+  prov:wasAttributedTo nidm:agent_S20  ;
+  nidm:gender " Female" .
+nidm:entity_31d618c7-41ee-4655-8ce2-3db0b8086029 rdf:type prov:Entity  ;
+  prov:wasGeneratedBy nidm:activity_b93f468f-474a-47e5-9d93-8fe295a49098  ;
+  prov:wasAttributedTo nidm:agent_S20  ;
+  nidm:new123 "test5" ;
+  nidm:field1 "test6" ;
+  nidm:field2 "test7" .
+nidm:activity_14a5588b-737e-444f-b9d2-5b74a7be13ee rdf:type prov:Activity  ;
+  nidm:SessionNumber "2" ;
+  nidm:SessionName "Session 2" ;
+  provone:isPartOf nidm:activity_41cc813a-30bc-4a10-9952-ddee8f5cc27b  ;
+  nidm:SessionID "14a5588b-737e-444f-b9d2-5b74a7be13ee" .
+nidm:activity_3bb572c0-80f0-49fd-af64-913c704f901b rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_14a5588b-737e-444f-b9d2-5b74a7be13ee  ;
+  nidm:AcquisitionName "T4" ;
+  nidm:AcquisitionActivityID "3bb572c0-80f0-49fd-af64-913c704f901b" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m83-12-Item  .
+nidm:entity_cadaabad-3417-45b2-9cc0-768837860208 rdf:type prov:Entity  ;
+  nidm:grit_amb3 " Very much like me" ;
+  nidm:grit5 " Not much like me" ;
+  nidm:subjectkey "G20" ;
+  nidm:src_subject_id "S20" ;
+  nidm:interview_date "05/22/2018"^^xsd:dateTime ;
+  nidm:interview_age "600" ;
+  nidm:grit1 " Not much like me" ;
+  nidm:grit2 " Somewhat like me" ;
+  nidm:grit3 " Very much like me" ;
+  nidm:grit6 " Not much like me" ;
+  nidm:grit8 " Not much like me" ;
+  nidm:grit9 " Not much like me" ;
+  nidm:grit10 " Not much like me" ;
+  nidm:grit11 " Not much like me" ;
+  nidm:grit12 " Not much like me" ;
+  nidm:grit_total "extremely gritty" ;
+  nidm:grit_ci "true" ;
+  nidm:grit_pe "true" ;
+  nidm:grit_bgss "8" ;
+  nidm:grit_amb "8" ;
+  nidm:grit_amb1 " Very much like me" ;
+  nidm:grit_amb4 " Very much like me" ;
+  nidm:grit_amb5 " Very much like me" ;
+  nidm:version_form "tyu" ;
+  prov:wasGeneratedBy nidm:activity_3bb572c0-80f0-49fd-af64-913c704f901b  ;
+  prov:wasAttributedTo nidm:agent_S20  ;
+  nidm:gender " Female" .
+nidm:agent_S19 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "06/22/1979"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_48fc6e73-1bf4-4acf-b599-401645115cae  ;
+  prov:wasAssociatedWith nidm:activity_f7b53f67-0cb3-4bf9-a04d-ad2738e9ab70  ;
+  prov:wasAssociatedWith nidm:activity_988443c9-0a25-4079-a219-e339055f2c8d  ;
+  prov:wasAssociatedWith nidm:activity_11c8f76b-a66d-4d09-9f93-3a44d81cbae6  ;
+  prov:wasAssociatedWith nidm:activity_09940565-df12-452e-ac4a-4a30f06de0b5  .
+nidm:agent_S20 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "05/22/1968"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_0251fb9b-7c60-4c5c-b4d4-c86334875c9a  ;
+  prov:wasAssociatedWith nidm:activity_1dcdfc1a-9909-4372-acc8-9140f71fa557  ;
+  prov:wasAssociatedWith nidm:activity_b93f468f-474a-47e5-9d93-8fe295a49098  ;
+  prov:wasAssociatedWith nidm:activity_14a5588b-737e-444f-b9d2-5b74a7be13ee  ;
+  prov:wasAssociatedWith nidm:activity_3bb572c0-80f0-49fd-af64-913c704f901b  .
