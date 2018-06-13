@@ -83,8 +83,9 @@ listOfFiles.then(function(list){
             })
             //store.execute(queryFunction("<"+graph+">"), function(err,results){
             //store.execute(queryFunction("S11","gender","<"+graph+">"), function(err,results){
-            store.execute(queryFunction("S19","<"+graph+">"), function(err,results){
-            //  store.execute(queryFunction("<"+graph+">"), function(err,results){
+          //  store.execute(queryFunction("S19","<"+graph+">"), function(err,results){ <--working
+          store.execute(queryFunction("","<"+graph+">"), function(err,results){
+            //store.execute(queryFunction("<"+graph+">"), function(err,results){
               console.log("[execute] graph: ", graph, "  results: ", results)
               if(results !== [] && results !== undefined){
                 console.log("results: ", results)
@@ -104,7 +105,7 @@ listOfFiles.then(function(list){
         return Promise.all(graphOfPromises)
     }).then(function(obj){
         //console.log("obj:", obj)
-        console.log("obj:all processed")
+        console.log("obj-------------:all processed-------------")
         /*let unique = []
         for(i=0;i<obj.length;i++){
           let flag = true
@@ -194,6 +195,7 @@ function queryFunction(subjectId,graphId){
     ?s rdf:type prov:Activity;\
     prov:used ?o .\
     } }'
+
   //get the session number and name and project
   let query7 =   'PREFIX prov:<http://www.w3.org/ns/prov#>\
   PREFIX provone:<http://purl.org/provone#>\
@@ -261,5 +263,45 @@ function queryFunction(subjectId,graphId){
       ?sessionactivity provone:isPartOf ?p .\
       ?p nidm:ID "'+ projectId +'" .\
     }}'
-  return query11
+
+    // get entity associated with an instrument within a project
+    //let instrument = "terms-Adult253-Adult"
+    let instrument = "terms-grit01-m83-12-Item"
+    projectId = "41cc813a-30bc-4a10-9952-ddee8f5cc27b"
+    let query12 = 'PREFIX prov:<http://www.w3.org/ns/prov#>\
+    PREFIX provone:<http://purl.org/provone#>\
+    PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\
+    PREFIX nidm:<http://purl.org/nidash/nidm#> \
+    SELECT ?s ?p ?v\
+    FROM NAMED '+ graphId + '\
+    {GRAPH '+graphId+'{ ?s rdf:type prov:Entity ;\
+      prov:wasGeneratedBy ?activity; \
+      ?p ?v.\
+      ?activity rdf:type prov:Activity ;\
+      provone:isPartOf ?sessionactivity;\
+      prov:used nidm:'+instrument+' .\
+      ?sessionactivity provone:isPartOf ?pj .\
+      ?pj nidm:ID "'+ projectId +'" .\
+    } }'
+
+    //let instrument = "terms-grit01-m83-12-Item"
+    //projectId = "41cc813a-30bc-4a10-9952-ddee8f5cc27b"
+    //get agent information as well 
+    let query13 = 'PREFIX prov:<http://www.w3.org/ns/prov#>\
+    PREFIX provone:<http://purl.org/provone#>\
+    PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\
+    PREFIX nidm:<http://purl.org/nidash/nidm#> \
+    SELECT ?s ?p ?v ?agent\
+    FROM NAMED '+ graphId + '\
+    {GRAPH '+graphId+'{ ?s rdf:type prov:Entity ;\
+      prov:wasGeneratedBy ?activity; \
+      prov:wasAttributedTo ?agent;\
+      ?p ?v.\
+      ?activity rdf:type prov:Activity ;\
+      provone:isPartOf ?sessionactivity;\
+      prov:used nidm:'+instrument+' .\
+      ?sessionactivity provone:isPartOf ?pj .\
+      ?pj nidm:ID "'+ projectId +'" .\
+    } }'
+  return query13
 }
