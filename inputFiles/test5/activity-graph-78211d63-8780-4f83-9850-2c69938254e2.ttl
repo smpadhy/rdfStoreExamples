@@ -1,0 +1,71 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:agent_S12 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "03/29/1968"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_0f51b4f9-24c8-403b-a905-ef81c3ee0531  ;
+  prov:wasAssociatedWith nidm:activity_63bb7812-19d9-4f82-9e99-bd6e2c3beb86  ;
+  prov:wasAssociatedWith nidm:activity_6d8b7ac7-8ee3-4ca1-8971-48a119265bb6  .
+nidm:entity_964e5097-8371-4d4b-adfb-6ccffba71538 nidm:grit4 " Not like me at all" ;
+  nidm:grit_amb3 " Not like me at all" ;
+  rdf:type prov:Entity  ;
+  nidm:grit5 " Not like me at all" ;
+  nidm:subjectkey "S12" ;
+  nidm:src_subject_id "S12" ;
+  nidm:interview_date "03/29/2018"^^xsd:dateTime ;
+  nidm:interview_age "600" ;
+  nidm:grit1 " Not like me at all" ;
+  nidm:grit2 " Not like me at all" ;
+  nidm:grit3 " Not like me at all" ;
+  nidm:grit6 " Not much like me" ;
+  nidm:grit7 " Not like me at all" ;
+  nidm:grit8 " Not like me at all" ;
+  nidm:grit9 " Not like me at all" ;
+  nidm:grit10 " Not like me at all" ;
+  nidm:grit11 " Not like me at all" ;
+  nidm:grit12 " Not like me at all" ;
+  nidm:grit_total "not at all gritty" ;
+  nidm:grit_ci "has" ;
+  nidm:grit_pe "great" ;
+  nidm:grit_bgss "1" ;
+  nidm:grit_amb "1" ;
+  nidm:grit_amb1 " Not like me at all" ;
+  nidm:grit_amb2 " Not like me at all" ;
+  nidm:grit_amb4 " Not like me at all" ;
+  nidm:grit_amb5 " Not like me at all" ;
+  nidm:version_form "12item" ;
+  prov:wasGeneratedBy nidm:activity_63bb7812-19d9-4f82-9e99-bd6e2c3beb86  ;
+  prov:wasAttributedTo nidm:agent_S12  .
+nidm:activity_87e96dea-4c81-4985-a419-4df178e91a64 rdf:type prov:Activity  ;
+  nidm:Description "Grit Measure" ;
+  dc:created "2018-03-29T11:02:46-04:00"^^xsd:dateTime ;
+  nidm:version "0" ;
+  nidm:ID "87e96dea-4c81-4985-a419-4df178e91a64" ;
+  nidm:Name "Grit Calc" ;
+  prov:hadPlan nidm:entity_c81a29b4-fb73-4a47-80f7-ff364dfc65ce  .
+nidm:activity_0f51b4f9-24c8-403b-a905-ef81c3ee0531 rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  nidm:SessionName "Session 1" ;
+  provone:isPartOf nidm:activity_87e96dea-4c81-4985-a419-4df178e91a64  ;
+  nidm:SessionID "0f51b4f9-24c8-403b-a905-ef81c3ee0531" .
+nidm:activity_63bb7812-19d9-4f82-9e99-bd6e2c3beb86 rdf:type prov:Activity  ;
+  nidm:AcquisitionName "Task 1" ;
+  provone:isPartOf nidm:activity_0f51b4f9-24c8-403b-a905-ef81c3ee0531  ;
+  nidm:AcquisitionActivityID "63bb7812-19d9-4f82-9e99-bd6e2c3beb86" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m83-12-Item  .
+nidm:activity_6d8b7ac7-8ee3-4ca1-8971-48a119265bb6 rdf:type prov:Activity  ;
+  nidm:AcquisitionName "Task 2" ;
+  provone:isPartOf nidm:activity_0f51b4f9-24c8-403b-a905-ef81c3ee0531  ;
+  nidm:AcquisitionActivityID "6d8b7ac7-8ee3-4ca1-8971-48a119265bb6" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-Adult253-Adult  .
+nidm:entity_78211d63-8780-4f83-9850-2c69938254e2 rdf:type prov:Entity  ;
+  prov:wasGeneratedBy nidm:activity_6d8b7ac7-8ee3-4ca1-8971-48a119265bb6  ;
+  prov:wasAttributedTo nidm:agent_S12  ;
+  nidm:new123 "taposh" ;
+  nidm:field1 "dtest1" ;
+  nidm:field2 "dtest2" .

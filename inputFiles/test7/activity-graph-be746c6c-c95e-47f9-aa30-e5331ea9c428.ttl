@@ -1,0 +1,70 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_bdfafb67-fe92-41e6-9a24-3ed8ecd174b4 nidm:SessionNumber "1" ;
+  rdf:type prov:Activity  ;
+  nidm:SessionName "S1" ;
+  nidm:SessionID "bdfafb67-fe92-41e6-9a24-3ed8ecd174b4" ;
+  provone:isPartOf nidm:activity_3e804264-d879-4851-a405-a3949f08f463  .
+nidm:activity_d43b9beb-960c-4753-934a-e88f22b3f222 nidm:AcquisitionName "grit measure" ;
+  rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_bdfafb67-fe92-41e6-9a24-3ed8ecd174b4  ;
+  nidm:AcquisitionActivityID "d43b9beb-960c-4753-934a-e88f22b3f222" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m30-grit01form1  .
+nidm:entity_0b10a74f-7571-4da2-9bbb-04e22095f562 nidm:src_subject_id "S11" ;
+  rdf:type prov:Entity  ;
+  nidm:interview_age "456" ;
+  nidm:gender " Male" ;
+  nidm:grit1 " Very much like me" ;
+  prov:wasGeneratedBy nidm:activity_d43b9beb-960c-4753-934a-e88f22b3f222  ;
+  prov:wasAttributedTo nidm:agent_S11  .
+nidm:activity_3e804264-d879-4851-a405-a3949f08f463 rdf:type prov:Activity  ;
+  nidm:Description "testing " ;
+  dc:created "2018-06-18T21:26:03-05:00"^^xsd:dateTime ;
+  nidm:version "0" ;
+  nidm:ID "3e804264-d879-4851-a405-a3949f08f463" ;
+  nidm:Name "C1" ;
+  prov:hadPlan nidm:entity_1e6ebb5d-5394-477e-b8ed-70dd93d8e97b  .
+nidm:activity_7ef87ff3-eb67-481c-ba0e-b1b9bb4910a2 rdf:type prov:Activity  ;
+  nidm:SessionNumber "2" ;
+  nidm:SessionName "S2" ;
+  nidm:SessionID "7ef87ff3-eb67-481c-ba0e-b1b9bb4910a2" ;
+  provone:isPartOf nidm:activity_3e804264-d879-4851-a405-a3949f08f463  .
+nidm:activity_e92fbb46-c4a6-407d-9673-a77df1ee03c1 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_7ef87ff3-eb67-481c-ba0e-b1b9bb4910a2  ;
+  nidm:AcquisitionActivityID "e92fbb46-c4a6-407d-9673-a77df1ee03c1" ;
+  nidm:AcquisitionName "scan" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-abcd_ra01-m55-scan1-form  .
+nidm:entity_0ce298a7-729d-4d5d-a0f6-8e2c8d36963f rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:gender " Male" ;
+  prov:wasGeneratedBy nidm:activity_e92fbb46-c4a6-407d-9673-a77df1ee03c1  ;
+  prov:wasAttributedTo nidm:agent_S11  ;
+  nidm:interview_date "06/18/2018"^^xsd:dateTime ;
+  nidm:ra_scan_cl_prescr_order "1" .
+nidm:activity_ac4e6e3a-e7dc-4e7c-b5bf-3ca45ee837a3 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_7ef87ff3-eb67-481c-ba0e-b1b9bb4910a2  ;
+  nidm:AcquisitionActivityID "ac4e6e3a-e7dc-4e7c-b5bf-3ca45ee837a3" ;
+  nidm:AcquisitionName "mmse" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-phexf01-m28-phq1-form  .
+nidm:entity_be746c6c-c95e-47f9-aa30-e5331ea9c428 rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:interview_age "456" ;
+  nidm:gender " Male" ;
+  prov:wasGeneratedBy nidm:activity_ac4e6e3a-e7dc-4e7c-b5bf-3ca45ee837a3  ;
+  prov:wasAttributedTo nidm:agent_S11  ;
+  nidm:v1_pe_bodysystem1 " general appearance" ;
+  nidm:v1_pe_bodysystem1_other "23" .
+nidm:agent_S11 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "06/18/1980"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_bdfafb67-fe92-41e6-9a24-3ed8ecd174b4  ;
+  prov:wasAssociatedWith nidm:activity_d43b9beb-960c-4753-934a-e88f22b3f222  ;
+  prov:wasAssociatedWith nidm:activity_7ef87ff3-eb67-481c-ba0e-b1b9bb4910a2  ;
+  prov:wasAssociatedWith nidm:activity_e92fbb46-c4a6-407d-9673-a77df1ee03c1  ;
+  prov:wasAssociatedWith nidm:activity_ac4e6e3a-e7dc-4e7c-b5bf-3ca45ee837a3  .

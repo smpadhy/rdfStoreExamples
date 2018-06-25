@@ -32,7 +32,7 @@ FROM NAMED <http://example.org/test> \
 } }'
 
 var listOfFiles = new Promise(function(resolve){
-    fs.readdir(path.join(__dirname, '/../inputFiles/test6'), function(err,list){
+    fs.readdir(path.join(__dirname, '/../inputFiles/test7'), function(err,list){
     //fs.readdir(path.join(__dirname, '/../inputFiles/acquisition'), function(err,list){
      let alist = []
       if(err) throw err;
@@ -47,7 +47,7 @@ var listOfFiles = new Promise(function(resolve){
   })
 listOfFiles.then(function(list){
     var arrayOfPromises = list.map(function(f){
-      let data = fs.createReadStream(path.join(__dirname,'/../inputFiles/test6/'+f))
+      let data = fs.createReadStream(path.join(__dirname,'/../inputFiles/test7/'+f))
       console.log("file names: ", f)
       //let data = fs.createReadStream(path.join(__dirname,'/../inputFiles/acquisition/'+f))
       let name = f.split(".")
@@ -88,7 +88,7 @@ listOfFiles.then(function(list){
             //store.execute(queryFunction("<"+graph+">"), function(err,results){
               console.log("[execute] graph: ", graph, "  results: ", results)
               if(results !== [] && results !== undefined){
-                console.log("results: ", results)
+                //console.log("results: ", results)
                 resolve(results)
                 /*resolve({
                   "origin":results[0].s.value,
@@ -106,6 +106,7 @@ listOfFiles.then(function(list){
     }).then(function(obj){
         //console.log("obj:", obj)
         console.log("obj-------------:all processed-------------")
+        console.log("~~~~~~obj:~~~~~~~~~~~~~~~~~~~~~~~~~~\n", obj)
         /*let unique = []
         for(i=0;i<obj.length;i++){
           let flag = true
@@ -265,8 +266,8 @@ function queryFunction(subjectId,graphId){
     }}'
 
     // get entity associated with an instrument within a project
-    //let instrument = "terms-Adult253-Adult"
-    let instrument = "terms-grit01-m83-12-Item"
+    let instrument = "terms-Adult253-Adult"
+    //let instrument = "terms-grit01-m83-12-Item"
     projectId = "41cc813a-30bc-4a10-9952-ddee8f5cc27b"
     let query12 = 'PREFIX prov:<http://www.w3.org/ns/prov#>\
     PREFIX provone:<http://purl.org/provone#>\
@@ -284,9 +285,10 @@ function queryFunction(subjectId,graphId){
       ?pj nidm:ID "'+ projectId +'" .\
     } }'
 
-    //let instrument = "terms-grit01-m83-12-Item"
-    //projectId = "41cc813a-30bc-4a10-9952-ddee8f5cc27b"
-    //get agent information as well 
+    instrument = "terms-grit01-m30-grit01form1"
+    instrument = "terms-phexf01-m28-phq1-form"
+    projectId = "3e804264-d879-4851-a405-a3949f08f463"
+    //get agent information as well
     let query13 = 'PREFIX prov:<http://www.w3.org/ns/prov#>\
     PREFIX provone:<http://purl.org/provone#>\
     PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\

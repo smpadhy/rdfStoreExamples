@@ -1,0 +1,15 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.org/> .
+
+GRAPH <http://example.org/alice>
+{
+    ex:entityAlice foaf:name "Alice" ;
+        foaf:mbox <mailto:alice@work.example.org> .
+}
+
+GRAPH <http://example.org/bob>
+{
+   ex:entityBob foaf:name "Bob" ;
+      foaf:mbox <mailto:bob@oldcorp.example.org> ;
+      foaf:knows ex:entityAlice .
+}

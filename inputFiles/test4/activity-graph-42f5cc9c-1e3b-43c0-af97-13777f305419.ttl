@@ -1,0 +1,35 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_848b6d7f-0585-42ff-b21b-b70175dca628 nidm:Description "Demo Collection" ;
+  rdf:type prov:Activity  ;
+  dc:created "2018-01-05T15:00:21-05:00"^^xsd:dateTime ;
+  nidm:version "0" ;
+  nidm:ID "848b6d7f-0585-42ff-b21b-b70175dca628" ;
+  nidm:Name "Collection 1" ;
+  prov:hadPlan nidm:entity_334533ac-afac-4d15-9aed-6d0ce9d932f7  .
+nidm:agent_S17 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "02/06/1981"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_254eee85-d740-41d2-90d0-555e946454e6  ;
+  prov:wasAssociatedWith nidm:activity_37325a6c-6bf5-4f5c-a0a9-3fe5a3294294  .
+nidm:activity_254eee85-d740-41d2-90d0-555e946454e6 rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  nidm:SessionName "S1" ;
+  provone:isPartOf nidm:activity_848b6d7f-0585-42ff-b21b-b70175dca628  ;
+  nidm:SessionID "254eee85-d740-41d2-90d0-555e946454e6" .
+nidm:activity_37325a6c-6bf5-4f5c-a0a9-3fe5a3294294 rdf:type prov:Activity  ;
+  nidm:AcquisitionActivityID "37325a6c-6bf5-4f5c-a0a9-3fe5a3294294" ;
+  provone:isPartOf nidm:activity_254eee85-d740-41d2-90d0-555e946454e6  ;
+  nidm:AcquisitionName "T1" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m85-immutable  .
+nidm:entity_42f5cc9c-1e3b-43c0-af97-13777f305419 rdf:type prov:Entity  ;
+  nidm:interview_date "01/06/2018"^^xsd:dateTime ;
+  nidm:src_subject_id "S17" ;
+  nidm:interview_age "443" ;
+  nidm:gender " Male" ;
+  prov:wasGeneratedBy nidm:activity_37325a6c-6bf5-4f5c-a0a9-3fe5a3294294  ;
+  prov:wasAttributedTo nidm:agent_S17  .

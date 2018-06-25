@@ -1,0 +1,107 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5 dc:created "2018-01-05T15:05:46-05:00"^^xsd:dateTime ;
+  nidm:Description "Collection for Study A" ;
+  rdf:type prov:Activity  ;
+  nidm:version "0" ;
+  nidm:ID "19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5" ;
+  nidm:Name "Collection 2" ;
+  prov:hadPlan nidm:entity_e22e7fbe-9495-424a-be7d-02ca600c6f36  .
+nidm:activity_9d007b14-8249-4864-b1a9-52f948b75800 nidm:AcquisitionActivityID "9d007b14-8249-4864-b1a9-52f948b75800" ;
+  rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_4eb1660d-0dd2-41af-9b49-cb224a8bd97b  ;
+  nidm:AcquisitionName "Call Subjects" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-bu_demographics01-m32-BUDemographics  .
+nidm:entity_976abc23-2d55-4e2a-baa8-0d30ede3b71d nidm:interview_date "01/05/2018"^^xsd:dateTime ;
+  rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:interview_age "443" ;
+  nidm:gender " Female" ;
+  nidm:race " White" ;
+  nidm:ethnicity "Hispanic or Latino" ;
+  prov:wasGeneratedBy nidm:activity_9d007b14-8249-4864-b1a9-52f948b75800  ;
+  prov:wasAttributedTo nidm:agent_S11  .
+nidm:entity_25cf04b4-8de8-4fef-b881-0ab323640acb prov:wasGeneratedBy nidm:activity_7aaa87d5-078e-4d60-827d-6897b128652f  ;
+  rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:interview_date "01/05/2018"^^xsd:dateTime ;
+  nidm:interview_age "443" ;
+  nidm:gender " Male" ;
+  prov:wasAttributedTo nidm:agent_S11  ;
+  nidm:subjectkey "nda123" ;
+  nidm:eventname "scan" ;
+  nidm:ra_scan_cl_prescr_order "1" ;
+  nidm:ra_scan_cl_non_rand " Yes" .
+nidm:activity_4eb1660d-0dd2-41af-9b49-cb224a8bd97b rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  nidm:SessionName "Phone Screen" ;
+  nidm:SessionID "4eb1660d-0dd2-41af-9b49-cb224a8bd97b" ;
+  provone:isPartOf nidm:activity_19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5  .
+nidm:activity_42120759-239e-475d-8a69-3cf162f72929 rdf:type prov:Activity  ;
+  nidm:SessionNumber "2" ;
+  nidm:SessionName "Scan" ;
+  nidm:SessionID "42120759-239e-475d-8a69-3cf162f72929" ;
+  provone:isPartOf nidm:activity_19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5  .
+nidm:activity_7aaa87d5-078e-4d60-827d-6897b128652f rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_42120759-239e-475d-8a69-3cf162f72929  ;
+  nidm:AcquisitionActivityID "7aaa87d5-078e-4d60-827d-6897b128652f" ;
+  nidm:AcquisitionName "Scanning" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-abcd_ra01-m76-scan-list  .
+nidm:activity_08ad5749-5058-4242-a09c-9c92ce523603 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_42120759-239e-475d-8a69-3cf162f72929  ;
+  nidm:AcquisitionActivityID "08ad5749-5058-4242-a09c-9c92ce523603" ;
+  nidm:AcquisitionName "Measure Mindfulness" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-camm01-m43-camm-edited  .
+nidm:entity_6b4b9f62-83cc-47b1-bfa3-6decc56edeb9 rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:interview_date "01/05/2018"^^xsd:dateTime ;
+  nidm:interview_age "443" ;
+  nidm:gender " Male" ;
+  prov:wasGeneratedBy nidm:activity_08ad5749-5058-4242-a09c-9c92ce523603  ;
+  prov:wasAttributedTo nidm:agent_S11  ;
+  nidm:subjectkey "nda123" ;
+  nidm:camm_1 " Always True" ;
+  nidm:camm_2 " Rarely True" ;
+  nidm:camm_tot "10" .
+nidm:activity_6817ccd0-c182-4f0e-a849-a4d81aae0859 rdf:type prov:Activity  ;
+  nidm:SessionNumber "3" ;
+  nidm:SessionName "GritScale" ;
+  nidm:SessionID "6817ccd0-c182-4f0e-a849-a4d81aae0859" ;
+  provone:isPartOf nidm:activity_19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5  .
+nidm:activity_6df6eab2-06f6-4daa-8bd4-d98d52fb5f6f rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_6817ccd0-c182-4f0e-a849-a4d81aae0859  ;
+  nidm:AcquisitionActivityID "6df6eab2-06f6-4daa-8bd4-d98d52fb5f6f" ;
+  nidm:AcquisitionName "Grit Scale Measurement" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-grit01-m74-12-gritscale  .
+nidm:entity_30922d8b-3acf-480a-bce5-32ec29031bfe rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:interview_date "01/05/2018"^^xsd:dateTime ;
+  nidm:interview_age "443" ;
+  nidm:gender " Female" ;
+  prov:wasGeneratedBy nidm:activity_6df6eab2-06f6-4daa-8bd4-d98d52fb5f6f  ;
+  prov:wasAttributedTo nidm:agent_S11  ;
+  nidm:subjectkey "nda123" ;
+  nidm:grit1 " Not like me at all" ;
+  nidm:grit2 " Not like me at all" ;
+  nidm:grit3 " Not like me at all" ;
+  nidm:grit_ci "yes" ;
+  nidm:grit_pe "yes" ;
+  nidm:grit_bgss "10" ;
+  nidm:grit_amb "10" .
+nidm:agent_S11 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "02/05/1981"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_4eb1660d-0dd2-41af-9b49-cb224a8bd97b  ;
+  prov:wasAssociatedWith nidm:activity_9d007b14-8249-4864-b1a9-52f948b75800  ;
+  prov:wasAssociatedWith nidm:activity_42120759-239e-475d-8a69-3cf162f72929  ;
+  prov:wasAssociatedWith nidm:activity_7aaa87d5-078e-4d60-827d-6897b128652f  ;
+  prov:wasAssociatedWith nidm:activity_08ad5749-5058-4242-a09c-9c92ce523603  ;
+  prov:wasAssociatedWith nidm:activity_6817ccd0-c182-4f0e-a849-a4d81aae0859  ;
+  prov:wasAssociatedWith nidm:activity_6df6eab2-06f6-4daa-8bd4-d98d52fb5f6f  .

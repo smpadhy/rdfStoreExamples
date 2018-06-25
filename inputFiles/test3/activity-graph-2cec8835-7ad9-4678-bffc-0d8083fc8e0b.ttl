@@ -1,0 +1,32 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_cd930bf1-944e-430a-a3d0-8c792f7db146 rdf:type prov:Activity  ;
+  nidm:Description "D5" ;
+  nidm:version "0" ;
+  nidm:ID "cd930bf1-944e-430a-a3d0-8c792f7db146" ;
+  nidm:Name "C5" ;
+  prov:hadPlan nidm:entity_d0e7b234-9733-41f0-a285-d8bdb1796a3d  .
+nidm:activity_cbaf2544-130d-4a69-859d-dbaf5d78dd8b rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  nidm:SessionName "S1" ;
+  nidm:SessionID "cbaf2544-130d-4a69-859d-dbaf5d78dd8b" ;
+  provone:isPartOf nidm:activity_cd930bf1-944e-430a-a3d0-8c792f7db146  .
+nidm:activity_9111e6bb-1703-45ca-b3a9-13bf31ec7474 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_cbaf2544-130d-4a69-859d-dbaf5d78dd8b  ;
+  nidm:AcquisitionActivityID "9111e6bb-1703-45ca-b3a9-13bf31ec7474" ;
+  nidm:AcquisitionName "T1" ;
+  prov:used nidm:terms-grit01-m54-grit01  .
+nidm:entity_2cec8835-7ad9-4678-bffc-0d8083fc8e0b rdf:type prov:Entity  ;
+  nidm:interview_date 2018":undefined  ;
+  nidm:gender " Male" ;
+  nidm:grit1 " Very much like me" ;
+  nidm:grit2 " Somewhat like me" ;
+  prov:wasGeneratedBy nidm:activity_9111e6bb-1703-45ca-b3a9-13bf31ec7474  ;
+  prov:wasAttributedTo nidm:agent_S123  .
+nidm:agent_S123 rdf:a prov:Agent  ;
+  prov:wasAssociatedWith nidm:activity_cbaf2544-130d-4a69-859d-dbaf5d78dd8b  ;
+  prov:wasAssociatedWith nidm:activity_9111e6bb-1703-45ca-b3a9-13bf31ec7474  .

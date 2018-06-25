@@ -1,0 +1,37 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5 dc:created "2018-01-05T15:05:46-05:00"^^xsd:dateTime ;
+  nidm:Description "Collection for Study A" ;
+  rdf:type prov:Activity  ;
+  nidm:version "0" ;
+  nidm:ID "19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5" ;
+  nidm:Name "Collection 2" ;
+  prov:hadPlan nidm:entity_e22e7fbe-9495-424a-be7d-02ca600c6f36  .
+nidm:activity_4eb1660d-0dd2-41af-9b49-cb224a8bd97b rdf:type prov:Activity  ;
+  nidm:SessionNumber "1" ;
+  nidm:SessionName "Phone Screen" ;
+  nidm:SessionID "4eb1660d-0dd2-41af-9b49-cb224a8bd97b" ;
+  provone:isPartOf nidm:activity_19eaa820-63ec-4c41-a3ba-c1d0ac10d8b5  .
+nidm:activity_9d007b14-8249-4864-b1a9-52f948b75800 rdf:type prov:Activity  ;
+  provone:isPartOf nidm:activity_4eb1660d-0dd2-41af-9b49-cb224a8bd97b  ;
+  nidm:AcquisitionActivityID "9d007b14-8249-4864-b1a9-52f948b75800" ;
+  nidm:AcquisitionName "Call Subjects" ;
+  nidm:Status "completed" ;
+  prov:used nidm:terms-bu_demographics01-m32-BUDemographics  .
+nidm:entity_976abc23-2d55-4e2a-baa8-0d30ede3b71d rdf:type prov:Entity  ;
+  nidm:src_subject_id "S11" ;
+  nidm:interview_date "01/05/2018"^^xsd:dateTime ;
+  nidm:interview_age "443" ;
+  nidm:gender " Female" ;
+  nidm:race " White" ;
+  nidm:ethnicity "Hispanic or Latino" ;
+  prov:wasGeneratedBy nidm:activity_9d007b14-8249-4864-b1a9-52f948b75800  ;
+  prov:wasAttributedTo nidm:agent_S11  .
+nidm:agent_S11 rdf:a prov:Agent  ;
+  nidm:dateOfBirth "02/05/1981"^^xsd:dateTime ;
+  prov:wasAssociatedWith nidm:activity_4eb1660d-0dd2-41af-9b49-cb224a8bd97b  ;
+  prov:wasAssociatedWith nidm:activity_9d007b14-8249-4864-b1a9-52f948b75800  .

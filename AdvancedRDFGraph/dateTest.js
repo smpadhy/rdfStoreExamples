@@ -30,13 +30,13 @@ let data = fs.createReadStream(path.join(__dirname,'/dateTest.ttl'))
 store.load('text/turtle',data, "ex:test",function(err,results){
   store.graph("ex:test", function(err, graph){
     // process graph
-    console.log("ex:test graph: ", graph.toArray())
+    //console.log("ex:test graph: ", graph.toArray())
   })
   store.execute(query,function(err, results1){
     if(err){
       console.log("err")
     }
-    console.log("ex:test results :  \n", results1)
+  //  console.log("ex:test results :  \n", results1)
   })
   store.registeredGraphs(function (results, graphs) {
         var values = []
@@ -60,15 +60,18 @@ var graph1 = store.rdf.createGraph()
 let n1 = store.rdf.createNamedNode(store.rdf.resolve("ex:sub2"))
 graph1.add(store.rdf.createTriple(n1,
     store.rdf.createNamedNode(store.rdf.resolve("ex:date")),
-    store.rdf.createLiteral("2014-05-23T11:20:13+05:30",null,"http://www.w3.org/2001/XMLSchema#dateTime")))
+    store.rdf.createLiteral("2014-05-23T11:20:13+05:30",null,store.rdf.resolve("xsd:dateTime"))))
 graph1.add(store.rdf.createTriple(n1,
   store.rdf.createNamedNode(store.rdf.resolve("ex:date")),
-  store.rdf.createLiteral(moment().format(),null,"http://www.w3.org/2001/XMLSchema#dateTime")))
+  store.rdf.createLiteral(moment().format(),null,store.rdf.resolve("xsd:dateTime"))))
 
+//var pm = store.createPrefixMap()
+//console.log("pm= ", pm)
 store.insert(graph1, "ex:sub2", function (err, results) {
-  store.graph("ex:sub2", function(err, graph){
+  store.graph("ex:sub2", function(err, graph2){
     // process graph
-    //console.log("ex:sub2 graph: ", graph.toArray())
+    console.log("ex:sub2 graphtoNT: ", graph2.toNT())
+    console.log("ex:sub2 graph: ", graph2.toArray())
   })
   store.execute(query1, function(err, results1){
     if(err){

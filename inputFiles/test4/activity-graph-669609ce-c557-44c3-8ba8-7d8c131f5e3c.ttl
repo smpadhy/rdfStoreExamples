@@ -1,0 +1,12 @@
+@prefix nidm: <http://purl.org/nidash/nidm#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix provone: <http://purl.org/provone#> .
+nidm:activity_848b6d7f-0585-42ff-b21b-b70175dca628 nidm:Description "Demo Collection" ;
+  rdf:type prov:Activity  ;
+  dc:created "2018-01-05T15:00:21-05:00"^^xsd:dateTime ;
+  nidm:version "0" ;
+  nidm:ID "848b6d7f-0585-42ff-b21b-b70175dca628" ;
+  nidm:Name "Collection 1" .
