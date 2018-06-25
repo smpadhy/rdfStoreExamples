@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "data-forge": "^0.6.0",
+    "jquery": "^3.2.1",
+    "load-json-file": "^2.0.0",
+    "moment": "^2.18.1",
     "rdfstore": "^0.9.17",
-    "uuid-random": "^1.0.5"
+    "uuid-random": "^1.0.5",
+    "xlsx": "^0.12.9"
   }
 }
